@@ -10,19 +10,24 @@
 				    <tr>
 				      <th scope="col">Nome</th>
 				      <th scope="col">Descrição</th>
-				      <th scope="col"></th>
+				      <th scope="col">Endereço</th>
 				      <th scope="col"></th>
 				      <th scope="col"></th>
 				    </tr>
 				   </thead>
 				    <tbody>
 					  	@foreach($clients as $client)
+
+
+
 						    <tr>						      
-						      <th> {{ $client->$name }} </th>						      
-						      <th> {{ $client->$description }} </th>
-						      <th><a href=" [[route('client.show', ['client' = $client->id])]] ">Vizualisar<a></th>
-						      <th><a href=" [[route('client.edit', ['client' = $client->id])]] ">Editar<a></th>
-						      <th><a href=" [[route('client.destroy', ['client' = $client->id])]] ">Apagar<a></th>
+						      <th> {{ $client->name }} </th>						      
+						      <th> {{ $client->description }} </th>
+							  <th> {{ $client->address }} </th>
+						      <th><a href=" [[route('client.show', [$client->id])]] ">Visualisar<a></th>
+						      <th><a href=" {[route('client.edit', ['client' = $client->id])]} ">Editar<a></th>
+						      <th><a href=" {{ URL::route('client.destroy',$client['id']['client']) }} ">Apagar<a></th>
+
 						    </tr>
 					</tbody>
 				</table>

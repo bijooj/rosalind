@@ -4,12 +4,12 @@
 <form action="{{ route('client.store') }}" method="post">
 	<div class="container">
 		<h3>Informações pessoais</h3>
-            <div class="col-md-4">
+            <!--<div class="col-md-4">
                 <label for="nome">Nome Completo:</label>
             </div>
             <div class="form-group col-md-12">
                 <input type="text" class="form-control" name="name" id="name" value="">
-            </div>
+            </div>-->
 
             <div class="col-md-12">
                 <label for="usuario">Cpf:</label>
@@ -36,7 +36,7 @@
                 <label for="usuario">Data de nascimento:</label>
             </div>
             <div class="form-group col-md-12">
-                <input type="text" class="form-control" name="date_birth" id="date_birth"  value="">
+                <input type="date" class="form-control" name="date_birth" id="date_birth"  value="">
             </div>
 
             <div class="col-md-12">
@@ -45,8 +45,16 @@
             <div class="form-group col-md-12">
                 <input type="text" class="form-control" name="description" id="description"  value="">
             </div>
-            
-            <div class="col-md-12 col-md-offset-4">
+
+            <div class="col-md-12">
+            <label for="usuario">Breve descrição sobre você:</label>
+            </div>
+            <div class="form-group col-md-12">
+            <input type="text" class="form-control" name="usersid" id="usersid"  value="">
+            </div>
+
+
+        <div class="col-md-12 col-md-offset-4">
                 <button type="submit" value="send" id="send">Salvar</button>
             </div>
 

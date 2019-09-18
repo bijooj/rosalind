@@ -20,4 +20,4 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::resource('/client','ClientController', ['except' => ['destroy']]);
-Route::get('/client{client}/delete', 'ClientController@destroy')->name('client.destroy'); //nao recomendado
+Route::get('/client/{client}/delete', 'ClientController@destroy')->name('client.destroy'); //nao recomendado

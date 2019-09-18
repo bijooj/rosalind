@@ -53,9 +53,19 @@ class ClientController extends Controller
      */
     public function show($id)
     {
-        //
         $client = Client::find($id);
+
+
         return view('client.show')->with(['client' => $client]);
+
+
+        //{"id":1,"cpf":"144","rg":"144","address":"aa","date_birth":"15\/10\/2001","description":"aaa","usersId":1,"created_at":null,"updated_at":null}
+
+        // echo json_encode($client);
+        /*
+        //
+
+        */
     }
 
     /**
